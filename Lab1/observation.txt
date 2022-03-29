@@ -1,0 +1,15 @@
+#Observations from running the program
+#1.The program outputs how many files I have in the current directory and prints the file names
+#2.The program then proceeds to prints my home directory, my username,the value of the PATH environmental variable, my current directory, and the current process ID.
+#3.The program then prints my login credentials adn the nuber of users currently logged in onto the computer.
+#4.The programs then checks if the credentials is a certain name; if so, the programs proceed, else it terminates.
+#5.The default name condition is "salagtash", which is the name of one of the professors for COEN177
+#6.When I used this default setting, the program will not proceed pass name check becasue my credential is not "salagtash"
+#7.I simply changed the name check condition to be my credential, which is "yqin2", and I was able to move forward.
+#8.The program successfully moved on the the traingle part after changing the name check condition.The area of the triangle was printed and the restart prompt showed up.
+#9 I then added the area of circle to the program, which requires handling floating points
+#10To handle floats, I used the "bc" modules
+
+#Questions
+#I am not sure if what I did was the right approach.
+#Is there a way to make this program work for any login credentials?
