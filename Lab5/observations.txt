@@ -1,0 +1,17 @@
+# Name: Yihui Qin
+# Date: 02/01/2022 
+# Title: Lab1 – task 
+# Description: This file documents observations of running threadsync.c, which is a multi-threaded program with mutual exclusion using semaphores.
+
+#Observations
+
+=Step1 --- threadSync.c
+
+---The programs may run correctly or may not
+---When ran correctly, the threads enter their critical region in order and print a return message upon exiting.
+---When ran incorrectly, the program enters deadlock where all threads are waiting for other threads to wake them up.
+---Th
+
+=step1 --- threadSync with sempahore
+---The programs will run, but with unpredictable results
+---Thread speeds are not guranteed which means the order of thread entering the critical region will not be the same as the creating orders.
