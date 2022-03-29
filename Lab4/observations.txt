@@ -1,0 +1,15 @@
+# Name: Yihui Qin 
+# Date: 01/25/2022 
+# Title: Lab4 – Observations Record
+# Description: This file documents answers to questions, observations, notes for COEN177 Lab4
+
+# step 1
+--- the program creates NTHREADS threads and for each thread creation, the system prints the thread number and its thread ID
+--- after running multiple times, difference in thread creation order has been spotted. The thread numbers do not print in order.
+--- in addition, some values of variable "i" are repeated
+--- after running after opening other heavy-process applications, the print results do not seem to be any different.
+--- according to the textbook, local variables are private, thus are not shared across threads; that means they are part of the TCB, or per-thread state
+--- since local variables are stored on the stack, they are considered private and in the per-thread state.
+--- after removing the second loop, the thread processes do not have to wait for each other to terminate before exiting; this means that the last message "main thread done"
+    can be printed before branch threads finish their processes.The results depend on the run-spped of each thread during the run-time.
+    
