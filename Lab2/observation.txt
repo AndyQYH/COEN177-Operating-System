@@ -1,0 +1,27 @@
+# Name: Yihui Qin 
+# Date: 1/11/2022
+# Title: Lab2 – observation report 
+# Description: This program computes documents observation seen from 
+# running lab2 programs 
+
+COEN 177 Lab2 Observations 
+
+step 2: runs ./step2 executable from code in step 1
+--- the programs threw a "segmentation fault" for using "atoi(argv[1])"
+--- this is expected because no input arguments are added to the program parameters.
+--- total number of input = 1 --- the name of the exe program, but we are trying to access the 2nd input(which does not exist)
+
+step 3: runs ./step2 with parameter 3000 as delay in ms
+--- there are some commands between the parent and child process that are not performed in the right order
+--- we expect parent process to execute first loop then the child process executes the first loop, and continuely doing it alternatively
+--- The disorder maybe due to the delay after running each loop may not be long enough or because the "/t" action takes extra time to perform
+--- parent process terminates before child process
+
+step3: runs ./step2 with parameter 500 / 5000
+--- ./step 500 produces more disorder in the listing of parent process and child process
+--- child process finishes before parent process
+--- ./step 5000 produces almost correct listing of parent process and child process
+--- child process ends before parent process\
+--- decrease in time delay associated with more chance of command clusterings
+--- that means parent and child doe not take turns printing all the time.
+      
