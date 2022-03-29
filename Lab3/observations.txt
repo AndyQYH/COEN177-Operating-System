@@ -1,0 +1,21 @@
+# Name: Yihui(Andy) Qin 
+# Date: 01/18/2022 
+# Title: Lab3 – Observation
+# Description: This file documents observations, notes, and answers to questions for COEN177 Lab3
+
+step1
+--- the output is a list of files that are contained in the current working directory
+--- the format is a little different from "ls" as it goes by column order first
+--- the result is the same as doing "ls | more" in the command line
+
+step2
+--- the writer passes the arguments on command line to the upstream in pipe
+--- the reader receives it through pipe from downstream and then print the input out with specified buffer size
+
+step6
+--- there are a total of 10 threads created
+--- values of i that are supposed to be passed: 0 to NTHREADS - 1 (10 - 1 = 9)
+--- values of i printed out: 2, 2, 6, 7, 5, 3, 4, 8, 9
+--- The first thread returns then the second, third,.... and finally the nineth.
+--- no duplicated thread IDs but have duplicated iteration
+--- each run has different results, the thread speed and operation finihs order are random.
